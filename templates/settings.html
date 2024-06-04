@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #h1 {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        .settings-section {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .settings-section h2 {
+            margin-top: 0;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="left">
+            <header>
+                <div class="logo">
+                    <h2>Harikrishna's Board</h2>
+                    <div class="close">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="material-symbols-outlined full"></span>
+                                <span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="{% url 'calender'%}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Calendars</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'payments'%}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Payment Options</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'conversations' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Conversations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'filings' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Filing Options</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'settings' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Settings</span>
+                            </a>
+                        </li>
+                        <!-- Add more navigation items here -->
+                    </ul>
+                </nav>
+            </header>
+            
+        </div>
+    
+    <main>
+      
+            <h1>User Settings</h1>
+        
+        <section class="settings-section">
+            <h2>Profile</h2>
+            <p>Edit your profile settings here.</p>
+            <button>Edit Profile</button>
+        </section>
+        <section class="settings-section">
+            <h2>Security</h2>
+            <p>Manage your account security settings.</p>
+            <button>Manage Security</button>
+        </section>
+        <section class="settings-section">
+            <h2>Notifications</h2>
+            <p>Configure your notification preferences.</p>
+            <button>Notification Settings</button>
+        </section>
+        <section class="settings-section">
+            <h2>Preferences</h2>
+            <p>Customize your application preferences.</p>
+            <button>Application Preferences</button>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,176 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conversations</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static "style.css" %}">
+        <style>
+    
+    
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            
+            #h1 {
+                background-color: #333;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            
+            .conversation {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 20px;
+                max-width: 600px;
+            }
+            
+            .user-avatar img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+            
+            .message-content h2 {
+                margin: 0;
+                font-size: 18px;
+            }
+            
+            .message-content p {
+                margin: 5px 0;
+                color: #666;
+                font-size: 14px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left">
+                <header>
+                    <div class="logo">
+                        <h2>Harikrishna's Board</h2>
+                        <div class="close">
+                            <span class="material-symbols-outlined">close</span>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    <span class="material-symbols-outlined full"></span>
+                                    <span class="title">Dashboard</span>
+                                </a>
+                            </li>
+                          
+                            <li>
+                                <a href="{% url 'calender'%}">
+                                    <span class="material-symbols-outlined"></span>
+                                    <span class="title">Calendars</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'payments' %}">
+                                    <span class="material-symbols-outlined"></span>
+                                    <span class="title">Payment Options</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'conversations' %}">
+                                    <span class="material-symbols-outlined"></span>
+                                    <span class="title">Conversations</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'filings' %}">
+                                    <span class="material-symbols-outlined"></span>
+                                    <span class="title">Filing Options</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'settings' %}">
+                                    <span class="material-symbols-outlined"></span>
+                                    <span class="title">Settings</span>
+                                </a>
+                            </li>
+                            <!-- Add more navigation items here -->
+                        </ul>
+                    </nav>
+                </header>
+                
+            </div>
+    
+        
+        
+        <main>
+            <h1><ins>Conversations</ins></h1>
+            <section class="conversation">
+    
+                
+                <br>
+                <div class="user-avatar">
+                    <img src="{% static "images/h2image.jpeg" %}" alt="User 1">
+                </div>
+                <div class="message-content">
+                    <h2>Revanth</h2>
+                    <p>Backend api is done from myside</p>
+                </div>
+            </section>
+            <section class="conversation">
+                <div class="user-avatar">
+                    <img src="{% static "images/h3image.jpeg" %}" alt="User 2">
+                </div>
+                <div class="message-content">
+                    <h2>Hari</h2>
+                    <p>Backend api is done from myside</p>
+                </div>
+            </section>
+            <section class="conversation">
+                <div class="user-avatar">
+                    <img src="{% static "images/h4image.jpeg" %}" alt="User 3">
+                </div>
+                <div class="message-content">
+                    <h2>Usha</h2>
+                    <p>Backend api is done from myside</p>
+                </div>
+            </section>
+            <section class="conversation">
+                <div class="user-avatar">
+                    <img src="{% static "images/h5image.jpeg" %}" alt="User 4">
+                </div>
+                <div class="message-content">
+                    <h2>Pallavi</h2>
+                    <p>Backend api is done from myside </p>
+                </div>
+            </section>
+            <section class="conversation">
+                <div class="user-avatar">
+                    <img src="{% static "images/h1image.jpeg" %}" alt="User 5">
+                </div>
+                <div class="message-content">
+                    <h2>Neha</h2>
+                    <p>Backend api is done from myside</p>
+                </div>
+            </section>
+        </main>
+    </body>
+    </html>
+    
+
+
+   

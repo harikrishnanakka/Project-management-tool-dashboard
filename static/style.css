@@ -1,0 +1,870 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Dubai;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#f4dbfb, #d8dbfe);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #f4dbfb;
+}
+::-webkit-scrollbar-thumb{
+    background: #f4dbfb;
+    border-radius: 10px;
+    border: 3px solid #fff;
+}
+
+.full {
+    font-variation-settings:
+        'FILL'1,
+        'wght'400,
+        'GRAD'0,
+        'opsz'48
+}
+
+/* container start */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 5px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1),
+        0 0 10px rgba(0, 0, 0, .2),
+        0 0 15px rgba(0, 0, 0, .2);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* left start */
+.container .left {
+    position: relative;
+    width: 250px;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.5) 35px 35px 68px 0px,
+        inset rgba(255, 255, 255, 0.6) -8px -8px 16px 0px,
+        inset rgb(255, 255, 255) 0px 11px 28px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+/* header start */
+.container .left header {
+    position: relative;
+    width: 100%;
+}
+
+/* logo start */
+.container .left header .logo {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .left header .logo h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+}
+
+.container .left header .logo .close {
+    position: relative;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    display: none;
+    cursor: pointer;
+}
+/* nav start */
+.container .left header nav {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+.container .left header nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container .left header nav ul li {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .left header nav ul li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: .3s ease;
+}
+
+.container .left header nav ul li:first-child a,
+.container .left header nav ul li a:hover {
+    transition: 0s;
+    background: #f1f3ff;
+}
+
+.container .left header nav ul li a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #6577ff;
+    transition: .3s ease;
+}
+.container .left header nav ul li:first-child a::before,
+.container .left header nav ul li a:hover::before {
+    width: 4px;
+}
+
+.container .left header nav ul li a .material-symbols-outlined {
+    color: #999;
+    font-size: 1.7em;
+    margin-right: 10px;
+}
+
+.container .left header nav ul li a .title {
+    color: #999;
+    font-size: 1.1em;
+}
+
+.container .left header nav ul li:first-child a .material-symbols-outlined,
+.container .left header nav ul li:first-child a .title,
+.container .left header nav ul li a:hover .material-symbols-outlined,
+.container .left header nav ul li a:hover .title {
+    color: #6577ff;
+}
+/* nav end */
+
+/* upgrade start */
+.container .upgrade {
+    position: relative;
+    width: calc(100% - 30px);
+    height: 180px;
+    background: linear-gradient(145deg, #d488ea, #8389f9);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container .upgrade h4 {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.container .upgrade .upBtn {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .upgrade .upBtn button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    outline: none;
+    border: none;
+    font-size: 1.2em;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* upgrade end */
+/* left end */
+/* right start */
+.container .right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* top start */
+.container .right .top {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+/* searchBx start */
+.container .right .top .searchBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.container .right .top .searchBx h2 {
+    color: #000;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.container .right .top .searchBx .inputBx {
+    position: relative;
+    width: 250px;
+    height: 40px;
+    background: #f8f2fe;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.container .right .top .searchBx .input span {
+    color: #999;
+    cursor: pointer;
+}
+
+.container .right .top .searchBx .inputBx input {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    outline: none;
+    border: none;
+    background: transparent;
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #000;
+}
+
+/* user start */
+.container .right .top .user {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .right .top .user h3 {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.container .right .top .user .imgBx {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container .right .top .user .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* user end */
+/* searchBx end */
+/* top end */
+/* cards start */
+.container .right .cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.container .right .cards .card {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1),
+        0 0 10px rgba(0, 0, 0, .2),
+        0 0 15px rgba(0, 0, 0, .2);
+    padding: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.container .right .cards .card::before {
+    content: '';
+    position: absolute;
+    left: -35%;
+    bottom: 50%;
+    width: 210px;
+    height: 210px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.container .right .cards .card .text {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.container .right .cards .card .text h3 {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.container .right .cards .card .text p {
+    color: #333;
+    font-size: .9em;
+}
+
+.container .right .cards .card .image {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .right .cards .card .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* cards end */
+/* right end */
+
+@media screen and (max-width: 1080px) {
+    .container .left {
+        position: fixed;
+        left: -100%;
+        z-index: 1;
+    }
+    .container .left header .logo h2 {
+        font-size: 1.7em;
+    }
+    .container .left header .logo .close {
+        display: block;
+    }
+    .container .right {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 2;
+    }
+    .container .right .top .searchBx .inputBx {
+        width: 100%;
+    }
+    .container .right .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container .right .top .searchBx {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .right .top .searchBx .inputBx {
+        width: 70%;
+        height: 100%;
+    }
+    .container .right .top .user {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: 70px;
+        background: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.calendar {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1),
+        0 0 10px rgba(0, 0, 0, .2),
+        0 0 15px rgba(0, 0, 0, .2);
+    padding: 20px;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.calendarHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f3ff;
+    margin-bottom: 10px;
+}
+
+.calendarHead h2 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+.calendarIcon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calendarIcon .material-symbols-outlined {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #6577ff;
+}
+
+.calendarData {
+    display: flex;
+    flex-direction: column;
+}
+
+.weeks, .days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weeks li, .days li {
+    width: 14.28%;
+    text-align: center;
+    font-size: 1em;
+    color: #000;
+    padding: 5px 0;
+}
+
+.weeks li {
+    font-weight: bold;
+}
+
+.days li {
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.days li:hover {
+    background: #f1f3ff;
+}
+
+.days li.inactive {
+    color: #999;
+}
+
+.days li.active {
+    background: #6577ff;
+    color: #fff;
+}
+
+.message {
+    background: #f8f2fe;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    height: 200px;
+}
+
+.message:hover {
+    background: #f1f3ff;
+}
+
+.message .content h2 {
+    font-size: 1.2em;
+    color: #000;
+}
+
+.message .content p {
+    color: #666;
+}
+
+.messageForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.messageForm input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #f1f3ff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+}
+
+.messageForm button {
+    padding: 10px 20px;
+    background: #6577ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.messageForm button:hover {
+    background: #4052e6;
+}
+
+
+
+
+
+.calendar {
+    height: 400px; /* Decrease the height as needed */
+    /* Other styles remain unchanged */
+}
+
+.messages {
+    height: 730px; /* Decrease the height as needed */
+    /* Other styles remain unchanged */
+}
+
+
+.userImg {
+    width: 40px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+    border-radius: 50%; /* Make the container a circle */
+    overflow: hidden; /* Ensure the image fits within the circle */
+    display: flex; /* Center the image inside the container */
+    align-items: center; /* Vertically center the image */
+    justify-content: center; /* Horizontally center the image */
+    border: 2px solid #fff; /* Optional: Add a border around the image */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a subtle 3D effect */
+}
+
+.userImg img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Ensure the image covers the entire container without distortion */
+}
+
+
+
+
+
+
+
+
+
+
+main {
+    flex: 1; /* Allows the main content area to expand and take up available space */
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: 1fr 1fr; /* Define two equal columns */
+    grid-template-rows: auto; /* Rows will adjust height based on content */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the main content */
+    background-color: #f9f9fb; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    overflow: auto; /* Enable scrolling if content overflows */
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Stack items in a single column on smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Additional styling for children elements within the main tag */
+main > .calendar, 
+main > .messages, 
+main > #project-progress-graph, 
+main > #task-timeline {
+    background-color: #fff; /* Background color for content sections */
+    padding: 20px; /* Padding inside the content sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a 3D effect */
+    overflow: hidden; /* Ensure content stays within boundaries */
+}
+
+/* Ensuring consistent margin and spacing for elements inside main */
+main > .calendar h2, 
+main > .messages h2, 
+main > #project-progress-graph h2, 
+main > #task-timeline h2
+main > .messages {
+    margin-bottom: 20px; /* Space below headers */
+    font-size: 1.5em; /* Consistent font size for headers */
+    color: #333; /* Text color */
+}
+
+main > .calendar ul, 
+main > .messages ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Ensuring responsiveness for charts */
+main > #project-progress-graph, 
+main > #task-timeline {
+    width: 100%; /* Ensure charts take full width of their containers */
+    height: 300px; /* Fixed height for charts */
+}
+
+@media (max-width: 480px) {
+    main > #project-progress-graph, 
+    main > #task-timeline {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+
+
+
+.calendarData ul.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Create 7 equal-width columns */
+    gap: 5px; /* Add space between grid items */
+    padding: 0;
+}
+
+.calendarData ul.days li {
+    width: auto; /* Allow items to expand to fit content */
+    height: auto; /* Allow items to expand to fit content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    list-style: none; /* Remove default list styling */
+}
+
+.calendarData ul.days li:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.calendarData ul.days li.inactive {
+    color: #ccc;
+}
+
+.calendarData ul.days li.active {
+    background-color: #ff5c5c;
+    color: #fff;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a .material-symbols-outlined {
+    margin-right: 10px;
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+nav ul li a .title {
+    margin-left: 5px;
+}
+
+
+
+/* Messages Section */
+.messages {
+    margin-top: 10px;
+}
+
+/* Messages Header */
+.messagesHead {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/* User Messages */
+.messagesUser {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.messagesUserImg {
+    margin-right: 10px;
+}
+
+.messagesUserImg img {
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.messagesUser h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.messagesUser h2 span {
+    font-size: 14px;
+    color: #666;
+}
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#project-progress-graph {
+    /* Position the graph above the calendar */
+    margin-top: -260px; /* Adjust this value as needed */
+}
+main{
+   padding-top: 50px;
+}

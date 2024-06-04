@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+   
+    
+    main {
+        padding: 20px;
+    }
+    
+    .payment-section {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .payment-section h2 {
+        margin-top: 0;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+</style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="left">
+            <header>
+                <div class="logo">
+                    <h2>Harikrishna's Board</h2>
+                    <div class="close">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="material-symbols-outlined full"></span>
+                                <span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="{% url 'calender'%}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Calendars</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'payments'%}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Payment Options</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'conversations' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Conversations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'filings' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Filing Options</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'settings' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Settings</span>
+                            </a>
+                        </li>
+                        <!-- Add more navigation items here -->
+                    </ul>
+                </nav>
+            </header>
+            
+        </div>
+    
+    <main>
+        
+            <h1>Payment Options</h1>
+        
+        <section class="payment-section">
+            <h2>Credit Card</h2>
+            <p>Enter your credit card information.</p>
+            <button>Update Credit Card</button>
+        </section>
+        <section class="payment-section">
+            <h2>PayPal</h2>
+            <p>Link your PayPal account.</p>
+            <button>Link PayPal</button>
+        </section>
+        <section class="payment-section">
+            <h2>Bank Transfer</h2>
+            <p>Setup bank transfer details.</p>
+            <button>Setup Bank Transfer</button>
+        </section>
+    </main>
+</body>
+</html>

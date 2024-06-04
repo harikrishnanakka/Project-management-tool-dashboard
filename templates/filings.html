@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    {% load static  %}
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        .container1 {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-header {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            flex: 1 1 300px; /* Flexbox properties */
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card:last-child {
+            margin-right: 0;
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .card p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            background-color: #007bff;
+            border-radius: 5px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <header>
+                <div class="logo">
+                    <h2>Harikrishna's Board</h2>
+                    <div class="close">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="material-symbols-outlined full"></span>
+                                <span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="{% url 'calender'%}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Calendars</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'payments'%}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Payment Options</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'conversations' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Conversations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'filings' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Filing Options</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'settings' %}">
+                                <span class="material-symbols-outlined"></span>
+                                <span class="title">Settings</span>
+                            </a>
+                        </li>
+                        <!-- Add more navigation items here -->
+                    </ul>
+                </nav>
+            </header>
+            
+        </div>
+
+
+
+    <div class="container1">
+        <div class="section">
+            <div class="section-header">
+                <h2>Task Overview</h2>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Task 1</h3>
+                    <p>Assigned To: John Doe</p>
+                    <p>Due Date: 2024-06-10</p>
+                    <p>Status: In Progress</p>
+                </div>
+                <div class="card">
+                    <h3>Task 2</h3>
+                    <p>Assigned To: Jane Smith</p>
+                    <p>Due Date: 2024-06-20</p>
+                    <p>Status: Pending</p>
+                </div>
+                <div class="card">
+                    <h3>Task 3</h3>
+                    <p>Assigned To: Michael Johnson</p>
+                    <p>Due Date: 2024-06-15</p>
+                    <p>Status: In Progress</p>
+                </div>
+                <div class="card">
+                    <h3>Task 4</h3>
+                    <p>Assigned To: Emily Brown</p>
+                    <p>Due Date: 2024-06-25</p>
+                    <p>Status: Pending</p>
+                </div>
+                <div class="card">
+                    <h3>Task 5</h3>
+                    <p>Assigned To: David Wilson</p>
+                    <p>Due Date: 2024-06-30</p>
+                    <p>Status: Completed</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add more sections with cards for different aspects of the project management -->
+    </div>
+</body>
+</html>
